@@ -1,0 +1,6 @@
+<div data-options="dxView : { name: 'ItemsFamily', title: 'Select Item Family', disableCache:true   } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <div class="itcustomersection" id="itemfamilygrid" data-bind="dxScrollView: {useNative: false, scrollByContent: true, bounceEnabled: true}">
+        </div>
+    </div>
+</div>

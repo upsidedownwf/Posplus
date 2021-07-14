@@ -1,0 +1,15 @@
+<div data-options="dxView : { name: 'Customers', title: 'Customers', disableCache:true } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <div id="searchcontainer">
+            <div id="addcustomerheads">
+                <div id="itwo" style="padding:5px 0px;">
+                    <div data-bind="dxButton: { text: 'add',icon: 'plus', onClick: addcustomer, width: '30%' }" class="btn" style="border-radius:20px 20px;background-color:#00BCD4;color:#fff;border-color:#00BCD4;position:absolute;right:0px;">
+                    </div>
+                </div>
+            </div>
+            <div id="addcustomersections" data-bind="dxScrollView: {useNative: false, scrollByContent: true, bounceEnabled: true}" style="padding:0px;margin:0px;">
+                
+            </div>
+        </div>
+    </div>
+</div>

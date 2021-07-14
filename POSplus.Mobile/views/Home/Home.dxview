@@ -1,0 +1,29 @@
+<div data-options="dxView : { name: 'Home', title: 'Home' } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <div class="hcontainer">
+                <div id="greeting">
+                </div>
+                <div id="space">
+                    <div class="row-with-medallion">
+                        <div id="quadrant">
+                            <div data-bind="dxButton: { text:'Order', onClick: order,icon: 'fa fa-shopping-cart' }" style="width:100%;height:100%;background-color: #00BCD4;color: #fff;"></div>
+                        </div>
+                        <div id="quadrant1">
+                            <div data-bind="dxButton: { text:'Recall', onClick: recall,icon: 'fa fa-undo'  }" style="width:100%;height:100%;background-color: #00BCD4;color: #fff;"></div>
+                        </div>
+                        <div id="quadrant2">
+                            <div data-bind="dxButton: { text:'Customers', onClick: customers,icon: 'fa fa-users' }" style="width:100%;height:100%;background-color: #00BCD4;color: #fff;"></div>
+                        </div>
+                        <div id="quadrant3">
+                            <div data-bind="dxButton: { text:'Reports', onClick: reports,icon: 'fa fa-file-text' }" style="width:100%;height:100%;background-color: #00BCD4;color: #fff;"></div>
+                        </div>
+                        <div id="medcontainer">
+                            <div id="the-medallion"></div>
+                        </div>
+                    </div>
+                    <p id="powersoftcopy" style="width:100%;color:#CCC;"></p>
+                </div>
+            
+        </div>
+    </div>
+</div>

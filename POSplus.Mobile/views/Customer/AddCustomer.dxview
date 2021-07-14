@@ -1,0 +1,44 @@
+<div data-options="dxView : { name: 'AddCustomer', title: 'Add Customer', disableCache:true } ">
+
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <div data-bind="dxLoadPanel: { message: 'Saving....',visible: Indicator ,closeOnOutsideClick: false,showIndicator: Indicator}"
+             style="position: absolute; top: 30%; left: 50%">
+        </div>
+        <div id="searchcontainer">
+            <div id="addcustomerhead">
+                <div id="itwo" style="padding:5px 0px;">
+                    <div data-bind="dxButton: { text: 'new',icon: 'plus', onClick: newcustomer, width: '30%' }" class="btn" style="border-radius:20px 20px;background-color:#00BCD4;color:#fff;border-color:#00BCD4;position:absolute;right:0px;">
+                    </div>
+                </div>
+            </div>
+            <div data-bind="dxScrollView: { }" id="addcustomersection">
+                <div style="padding:0px 1rem 1rem 1rem" >
+                    <form id="cusform">
+                        <div class="form-group">
+                            <div data-bind="dxTextBox: { placeholder:'Customer Code', value: code, readOnly: true}"></div>
+                        </div>
+                        <div class="form-group">
+                            <div id="name"></div>
+                        </div>
+                        <div class="form-group">
+                            <div id="phone"></div>
+                        </div>
+                        <div class="form-group">
+                            <div id="email"></div>
+                        </div>
+                        <div class="form-group">
+                            <div data-bind="dxDateBox: { placeholder:'Date of Birth', value: dob, max: new Date(),displayFormat: 'dd-MM-yyyy'}"></div>
+                        </div>
+                        <div class="form-group">
+                            <div data-bind="dxTextBox: { placeholder:'Address', value: address}"></div>
+                        </div>
+                        <br />
+                        <center>
+                            <div id="submitcustomer" class="btn form-control" style="border-radius:20px 20px;background-color:#00BCD4;width:70%;color:#fff;border-color:#00BCD4"></div>
+                        </center>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

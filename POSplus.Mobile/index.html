@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>POSplus</title>
+        
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+    -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval';">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="css/dx.spa.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet"  href="css/font-awesome-extension.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/dx.common.css" />    
+    <link rel="dx-theme" data-theme="generic.light" href="css/dx.light.css" data-active="true" />
+    <link rel="dx-theme" data-theme="generic.light.compact" href="css/dx.light.compact.css" />
+    <link rel="dx-theme" data-theme="generic.dark" href="css/dx.dark.css" />
+    <link rel="dx-theme" data-theme="generic.dark.compact" href="css/dx.dark.compact.css" />
+    <link rel="dx-theme" data-theme="generic.contrast" href="css/dx.contrast.css" />
+    <link rel="dx-theme" data-theme="generic.contrast.compact" href="css/dx.contrast.compact.css" />
+    <link rel="dx-theme" data-theme="android5.light" href="css/dx.android5.light.css"/>
+    <link rel="dx-theme" data-theme="ios7.default" href="css/dx.ios7.default.css" />
+    <link href="css/login.css" rel="stylesheet" />
+    <link href="css/order.css" rel="stylesheet" />
+    <link href="css/customer.css" rel="stylesheet" />
+    <!--
+    <link rel="dx-theme" data-theme="win8.black" href="css/dx.win8.black.css" data-active="true" />
+    <link rel="dx-theme" data-theme="win8.white" href="css/dx.win8.white.css" />
+    <link rel="dx-theme" data-theme="win10.white" href="css/dx.win10.white.css" />
+    -->
+    <link rel="dx-theme" data-theme="win10.black" href="css/dx.win10.black.css" data-active="true" />
+
+    <script type="text/javascript" src="cordova.js"></script>
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/knockout-latest.js"></script>
+
+    <!-- Read the Localization section of the migration guide for more details http://dxpr.es/1TXqrVS -->
+    <!--
+    <script type="text/javascript" src="js/cldr.min.js"></script>
+    <script type="text/javascript" src="js/cldr/event.min.js"></script>
+    <script type="text/javascript" src="js/cldr/supplemental.min.js"></script>
+
+    <script type="text/javascript" src="js/globalize.min.js"></script>
+    <script type="text/javascript" src="js/globalize/message.min.js"></script>
+    <script type="text/javascript" src="js/globalize/number.min.js"></script>
+    <script type="text/javascript" src="js/globalize/date.min.js"></script>
+    <script type="text/javascript" src="js/globalize/currency.min.js"></script>
+    -->
+
+    <script type="text/javascript" src="js/dx.all.js"></script>
+    <!--
+    <script type="text/javascript" src="js/dx.all.debug.js"></script>
+    -->
+
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <script type="text/javascript" src="posplus.shared.config.js"></script>
+    <script type="text/javascript" src="posplus.config.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="data/db.js"></script>
+    <!-- Layouts -->
+    <link rel="stylesheet" type="text/css" href="layouts/SlideOut/SlideOutLayout.css" />
+    <link rel="dx-template" type="text/html" href="layouts/SlideOut/SlideOutLayout.html"/>
+    <script type="text/javascript" src="layouts/SlideOut/SlideOutLayout.js"></script>
+    <link rel="stylesheet" type="text/css" href="layouts/Simple/SimpleLayout.css" />
+    <link rel="dx-template" type="text/html" href="layouts/Simple/SimpleLayout.html"/>
+    <script type="text/javascript" src="layouts/Simple/SimpleLayout.js"></script>
+    <link rel="stylesheet" type="text/css" href="layouts/Popup/PopupLayout.css" />
+    <link rel="dx-template" type="text/html" href="layouts/Popup/PopupLayout.html"/>
+    <script type="text/javascript" src="layouts/Popup/PopupLayout.js"></script>
+
+    <!-- Views -->
+    <link rel="dx-template" type="text/html" href="views/about.html"/>
+    <link rel="dx-template" type="text/html" href="views/blank.html"/>
+
+
+		<script type="text/javascript" src="views/Login/Login.js"></script>
+		<link rel="dx-template" type="text/html" href="views/Login/Login.dxview"/>
+
+		<script type="text/javascript" src="views/Home/Home.js"></script>
+		<link rel="dx-template" type="text/html" href="views/Home/Home.dxview"/>
+
+    <script type="text/javascript" src="views/Order/Order.js"></script>
+    <link rel="dx-template" type="text/html" href="views/Order/Order.dxview" />
+
+		<script type="text/javascript" src="views/Order/AddItems.js"></script>
+		<link rel="dx-template" type="text/html" href="views/Order/AddItems.dxview"/>
+
+		<script type="text/javascript" src="views/Order/ItemSearch.js"></script>
+		<link rel="dx-template" type="text/html" href="views/Order/ItemSearch.dxview"/>
+
+		<script type="text/javascript" src="views/Customer/AddCustomer.js"></script>
+		<link rel="dx-template" type="text/html" href="views/Customer/AddCustomer.dxview"/>
+
+		<script type="text/javascript" src="views/Customer/CustomerSearch.js"></script>
+		<link rel="dx-template" type="text/html" href="views/Customer/CustomerSearch.dxview"/>
+
+		<script type="text/javascript" src="views/ItemSearchTypes/ItemsFamily.js"></script>
+		<link rel="dx-template" type="text/html" href="views/ItemSearchTypes/ItemsFamily.dxview"/>
+
+		<script type="text/javascript" src="views/ItemSearchTypes/ItemsCategory.js"></script>
+		<link rel="dx-template" type="text/html" href="views/ItemSearchTypes/ItemsCategory.dxview"/>
+
+
+		<script type="text/javascript" src="views/OrderExtras/Tables.js"></script>
+		<link rel="dx-template" type="text/html" href="views/OrderExtras/Tables.dxview"/>
+
+		<script type="text/javascript" src="views/OrderExtras/Currency.js"></script>
+		<link rel="dx-template" type="text/html" href="views/OrderExtras/Currency.dxview"/>
+
+
+		<script type="text/javascript" src="views/Shift/OpenShift.js"></script>
+		<link rel="dx-template" type="text/html" href="views/Shift/OpenShift.dxview"/>
+
+		<script type="text/javascript" src="views/Shift/EmployeeShift.js"></script>
+		<link rel="dx-template" type="text/html" href="views/Shift/EmployeeShift.dxview"/>
+
+		<script type="text/javascript" src="views/Shift/ShiftType.js"></script>
+		<link rel="dx-template" type="text/html" href="views/Shift/ShiftType.dxview"/>
+
+		<script type="text/javascript" src="views/CloseShift/CloseShift.js"></script>
+		<link rel="dx-template" type="text/html" href="views/CloseShift/CloseShift.dxview"/>
+
+		<script type="text/javascript" src="views/CloseShift/CloseEmployeeShift.js"></script>
+		<link rel="dx-template" type="text/html" href="views/CloseShift/CloseEmployeeShift.dxview"/>
+
+		<script type="text/javascript" src="views/Customer/Customers.js"></script>
+		<link rel="dx-template" type="text/html" href="views/Customer/Customers.dxview"/>
+
+		<script type="text/javascript" src="views/Recall/Recall.js"></script>
+		<link rel="dx-template" type="text/html" href="views/Recall/Recall.dxview"/>
+  
+		<script type="text/javascript" src="views/Report/Reports.js"></script>
+		<link rel="dx-template" type="text/html" href="views/Report/Reports.dxview"/>
+
+		<script type="text/javascript" src="views/Report/OrdersListing.js"></script>
+		<link rel="dx-template" type="text/html" href="views/Report/OrdersListing.dxview"/>
+
+		<script type="text/javascript" src="views/Report/SalesListing.js"></script>
+		<link rel="dx-template" type="text/html" href="views/Report/SalesListing.dxview"/>
+
+		<script type="text/javascript" src="views/Report/OrderListingDetails.js"></script>
+		<link rel="dx-template" type="text/html" href="views/Report/OrderListingDetails.dxview"/>
+
+		<script type="text/javascript" src="views/APISetup/ApiSetup.js"></script>
+		<link rel="dx-template" type="text/html" href="views/APISetup/ApiSetup.dxview"/>
+
+		<script type="text/javascript" src="views/APISetup/ChangeApiSetup.js"></script>
+		<link rel="dx-template" type="text/html" href="views/APISetup/ChangeApiSetup.dxview"/>
+
+
+		<script type="text/javascript" src="views/Home/AdminHome.js"></script>
+		<link rel="dx-template" type="text/html" href="views/Home/AdminHome.dxview"/>
+</head>
+<body>
+    <div class="dx-viewport"></div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<div data-options="dxView : { name: 'Reports', title: 'Reports' } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <div class="itcustomersection" id="orderdetailsgrid" data-bind="dxScrollView: {useNative: false, scrollByContent: true, bounceEnabled: true}">
+            <p></p>
+            <div data-bind="dxButton: { text: 'Order Listing', onClick: orderlisting, width:'100%', icon:'fa fa-list' }" class="btn" style="border-radius:20px 20px;background-color:#00BCD4;color:#fff;border-color:#00BCD4;position:relative;right:0px;">
+            </div>
+            <br/><p></p>
+            <div data-bind="dxButton: { text: 'Sales Listing', onClick: saleslisting, width:'100%', icon:'fae fae-checklist-o' }" class="btn" style="border-radius:20px 20px;background-color:#00BCD4;color:#fff;border-color:#00BCD4;position:relative;right:0px;">
+            </div>
+        </div>
+    </div>
+</div>

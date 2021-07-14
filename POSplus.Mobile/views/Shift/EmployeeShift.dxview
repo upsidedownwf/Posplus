@@ -1,0 +1,6 @@
+<div data-options="dxView : { name: 'EmployeeShift', title: 'Select Employee', disableCache: true } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+            <div class="itcustomersection" id="employeesgrid" data-bind="dxScrollView: {useNative: false, scrollByContent: true, bounceEnabled: true}">
+            </div>
+    </div>
+</div>

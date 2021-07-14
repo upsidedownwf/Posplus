@@ -1,0 +1,41 @@
+<div data-options="dxView : { name: 'ItemSearch', title: 'Search Items',disableCache:true  } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <div data-bind="dxLoadPanel: { message: 'Loading Item(s)....',visible: Indicator ,closeOnOutsideClick: false,showIndicator: Indicator}"
+             style="position: absolute; top: 30%; left: 50%">
+        </div>
+        <div id="searchcontainer">
+            <div id="iscustomerhead">
+                <div id="isone">
+                    <div data-bind="dxTextBox: { placeholder:'Name', onContentReady: clearButton, value:name, onFocusIn: focusinname}"></div>
+                </div>
+                <div id="istwo">
+                    <div data-bind="dxTextBox: { placeholder:'Item Code', onContentReady: clearButton, value:code, onFocusIn: focusincode, width:'95%'}" style="position:absolute;left:0px;"></div>
+
+                </div>
+                <div id="isthree"><div data-bind="dxTextBox: { placeholder:'UPC', onContentReady: clearButton, value:upc, onFocusIn: focusinupc, width:'95%' }" style="position:absolute;right:0px;"></div></div>
+                <div id="isfour">
+                <div data-bind="dxTextBox: { placeholder:'Select Family...',readOnly:true, onContentReady: clearButton, value: family, width:'95%', onFocusIn: gotofamily}"  style="position:absolute;left:0px;">
+                </div>
+                 <!--<div data-bind="dxButton: { icon:'search', onClick: gotofamily }" style="position:absolute;left:75%;">
+
+                 </div>-->
+                </div>
+                <div id="isfive">
+                    <div data-bind="dxTextBox: { placeholder:'Select Category...',readOnly:true, onContentReady: clearButton, value: category, width:'95%', onFocusIn:gotocategory }" style="position:absolute;right:0px;">
+                    </div>
+                    <!--<div data-bind="dxButton: { icon:'search', onClick: gotocategory }" style="position:absolute;right:0;">
+
+                    </div>-->
+                </div>
+                <div id="issix">
+                    <center>
+                        <div data-bind="dxButton: { text: 'Search',icon:'search', onClick:searchitem }" class="btn btn-sm form-control" style="border-radius:20px 20px;width:70%;background-color:#00BCD4;color:#fff;border-color:#00BCD4"></div>
+                    </center>
+                </div>
+            </div>
+            <div class="scustomersection" id="itemsearchgrid" data-bind="dxScrollView: {useNative: false, scrollByContent: true, bounceEnabled: true}">
+            </div>
+
+        </div>
+    </div>
+</div>

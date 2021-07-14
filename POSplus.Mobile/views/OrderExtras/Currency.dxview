@@ -1,0 +1,6 @@
+<div data-options="dxView : { name: 'Currency', title: 'Select Currency' } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <div class="itcustomersection" id="currencygrid" data-bind="dxScrollView: {useNative: false, scrollByContent: true, bounceEnabled: true}">
+        </div>
+    </div>
+</div>

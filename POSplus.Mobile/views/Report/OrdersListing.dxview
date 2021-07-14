@@ -1,0 +1,32 @@
+<div data-options="dxView : { name: 'OrdersListing', title: 'Order Listing', disableCache:true } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <div data-bind="dxLoadPanel: { message: 'Loading Orders....',visible: Indicator ,closeOnOutsideClick: false,showIndicator: Indicator}"
+             style="position: absolute; top: 30%; left: 50%">
+        </div>
+        <div id="searchcontainer">
+            <div id="recustomerhead">
+                <div id="resone"><div id="startDate" style="position:absolute;left:0px;"></div></div>
+                <div id="restwo"><div id="endDate" style="position:absolute;right:0px;"></div></div>
+                <div id="resthree">
+                    <center>
+                        <div data-bind="dxButton: { text: 'Search',icon:'search', onClick:getorderlisting }" class="btn btn-sm form-control" style="border-radius:20px 20px;width:70%;background-color:#00BCD4;color:#fff;border-color:#00BCD4"></div>
+                    </center>
+                </div>
+            </div>
+            <div class="rescustomersection" id="orderlistinggrid" data-bind="dxScrollView: {useNative: false, scrollByContent: true, bounceEnabled: true}">
+
+            </div>
+            <div id="foot">
+                <div class="rows" style="padding-bottom:3px;">
+                    <div class="flex1" style="padding-right:0px">
+                        <div><div style="box-sizing:border-box;text-align:left;display:inline-block"><strong>SubTotal: </strong></div> <div id="subbtotal" style="box-sizing:border-box;text-align:left;display:inline-block"></div></div>
+                    </div>
+                    <div class="flex2" style="padding-left:15px">
+
+                        <div><div style="text-align:left;display:inline-block"><strong>Total: </strong></div> <div id="total" style="box-sizing:border-box;text-align:left;display:inline-block"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

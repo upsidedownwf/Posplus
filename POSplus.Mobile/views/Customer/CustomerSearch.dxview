@@ -1,0 +1,29 @@
+<div data-options="dxView : { name: 'CustomerSearch', title: 'Search Customer', disableCache:true } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <div data-bind="dxLoadPanel: { message: 'Loading Customer(s)....',visible: Indicator ,closeOnOutsideClick: false,showIndicator: Indicator}"
+             style="position: absolute; top: 30%; left: 50%">
+        </div>
+        <div id="searchcontainer">
+            <div id="scustomerhead">
+                <div id="csone">
+                    <div data-bind="dxButton: { text: 'add',icon: 'plus', onClick: addcustomer, width: '70%' }" class="btn" style="border-radius:20px 20px;background-color:#00BCD4;color:#fff;border-color:#00BCD4;position:absolute;right:0px;"></div>
+                </div>
+                <div id="cstwo">
+                    <div data-bind="dxTextBox: { placeholder:'Name', value:name , onContentReady: clearButton, onFocusIn: focusinname, width: '95%'}" style="position:absolute;left:0px;"></div>
+
+                </div>
+                <div id="csthree"><div data-bind="dxTextBox: { placeholder:'Customer Code', value: code, onContentReady: clearButton,onFocusIn: focusincode, width: '95%' }" style="position:absolute;right:0px;"></div></div>
+                <div id="csfour"><div data-bind="dxTextBox: { placeholder:'Phone', value:phone, onContentReady: clearButton, onFocusIn: focusinphone, width: '95%'}" style="position:absolute;left:0px;"></div></div>
+                <div id="csfive"><div data-bind="dxTextBox: { placeholder:'Email', value:email, onContentReady: clearButton, onFocusIn: focusinemail, width: '95%'}" style="position:absolute;right:0px;"></div></div>
+                <div id="cssix">
+                    <center>
+                        <div data-bind="dxButton: { text: 'Search',icon:'search', onClick:searchcustomer }" class="btn btn-sm form-control" style="border-radius:20px 20px;width:70%;background-color:#00BCD4;color:#fff;border-color:#00BCD4"></div>
+                    </center>
+                </div>
+            </div>
+            <div class="scustomersection" id="customergrid" data-bind="dxScrollView: {useNative: false, scrollByContent: true, bounceEnabled: true}">
+
+            </div>
+        </div>
+    </div>
+</div>

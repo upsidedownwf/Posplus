@@ -1,0 +1,9 @@
+<div data-options="dxView : { name: 'Recall', title: 'Recall', disableCache: true } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <div data-bind="dxLoadPanel: { message: 'Recalling Order....',visible: Indicator ,closeOnOutsideClick: false,showIndicator: Indicator}"
+             style="position: absolute; top: 30%; left: 50%">
+        </div>
+        <div class="itcustomersection" id="recallordergrid" data-bind="dxScrollView: {useNative: false, scrollByContent: true, bounceEnabled: true}">
+        </div>
+    </div>
+</div>

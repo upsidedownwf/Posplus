@@ -1,0 +1,38 @@
+<div data-options="dxView : { name: 'OrderListingDetails', title: 'Order Details', disableCache:true } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content', disableCache:true} " class="dx-content-background">
+        <div id="ordercontainer">
+            <div id="headdetails">
+                <div id="one" style="padding:10px 0px;"><div style="box-sizing:border-box;text-align:left;display:inline-block"><strong>Order Number:</strong></div> <div id="onetext" style="box-sizing:border-box;text-align:left;display:inline-block"></div></div>
+                <div id="two" style="padding:10px 0px;"></div>
+                <div id="three">
+                   
+                </div>
+                <div id="four">
+                        <strong><label>Currency</label></strong>
+                        <div id="currencyDropdown" style="position:absolute;right:0px;width:95%;margin-bottom:2px;"></div>
+                </div>
+                <div id="five">
+                        <strong><label>Table</label></strong>
+                        <div data-bind="dxTextBox: {value: table, readOnly:true, width:'95%'}" style="position:absolute;left:0px;margin-bottom:2px;"></div>
+                </div>
+                <div id="six">
+                        <strong><label>Customer</label></strong>
+                        <div id="customerValue" style="position:absolute;right:0px;width:95%;margin-bottom:2px;"></div>
+                </div>
+            </div>
+            <div class="itcustomersections" id="orderdetailsgrid" data-bind="dxScrollView: {useNative: false, scrollByContent: true, bounceEnabled: true}">
+            </div>
+            <div id="detailrows">
+                <div class="rows" style="padding-bottom:3px;">
+                    <div class="flex1" style="padding-right:15px">
+                        <div><div style="box-sizing:border-box;text-align:left;display:inline-block"><strong>SubTotal: </strong></div> <div id="subtotalde" style="box-sizing:border-box;text-align:left;display:inline-block"></div></div>
+                    </div>
+                    <div class="flex2" style="padding-left:15px">
+
+                        <div><div style="text-align:left;display:inline-block"><strong>Total: </strong></div> <div id="totalde" style="box-sizing:border-box;text-align:left;display:inline-block"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

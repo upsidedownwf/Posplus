@@ -1,0 +1,42 @@
+<div data-options="dxView : { name: 'AddItems', title: 'Add Items', disableCache:true } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <div id="ordercontainer">
+            <div id="aitemhead">
+                <div id="aione" style="padding:0px 4px;"> 
+                    <strong><label>Item</label></strong>
+                    <div data-bind="dxTextBox: {placeholder:'Select Item...',width:'95%', readOnly: true, value:itemname, onFocusIn:searchitem }" style="position:absolute;left:0px;"></div>
+                    <!--<div data-bind="dxButton: { icon:'fa fa-search', onClick: searchitem }" style="position:absolute;left:75%;"></div>-->
+                </div>
+                <div id="aitwo">
+                    <strong><label>Quantity</label></strong>
+                    <div data-bind="dxNumberBox: {  min: 1,  showSpinButtons: true, width:'95%', value: quantity}">
+
+                    </div>
+                </div>
+                <div id="aithree">
+                    <strong><label>Price</label></strong>
+                    <div data-bind="dxTextBox: { readOnly: true ,placeholder: 'Price', value:price, width:'95%'}" style="position:absolute;right:0px;"></div>
+                </div>
+                <div id="aifour" ><strong><label>Discount</label></strong><div data-bind="dxTextBox: { readOnly: true ,placeholder: 'Discount', readOnly: true, value: discount, width:'95%'}" style="position:absolute;right:0px;"></div></div>
+                <!--<div id="aiseven" style="margin-right:5px;"><div data-bind="dxTextBox: { readOnly: true ,placeholder: 'Tax'}" style="position:absolute;right:0px;"></div></div>
+                <div id="aieight" style="margin-left:5px;"><div data-bind="dxTextBox: { readOnly: true ,placeholder: 'Total'}" style="position:absolute;right:0px;"></div></div>-->
+                <div id="aifive"></div>
+                <div id="aieight" style="margin-bottom:5px;">
+                    <div data-bind="dxButton: { text: 'add',icon: 'plus', onClick: additemtoorder, width:'70%', }" class="btn" style="border-radius:20px 20px;background-color:#00BCD4;color:#fff;border-color:#00BCD4;position:absolute;right:0px;">
+                    </div>
+                </div>
+            </div>
+            <div id="itemsection" data-bind="dxScrollView: {useNative: false, scrollByContent: true, bounceEnabled: true}">
+                
+            </div>
+            <div id="itemfoot">
+                <center>
+                   <div data-bind="dxButton: { text: 'Continue Order', onClick: continueorder, icon:'fa fa-play' }" class="btn btn-sm form-control" style="border-radius:20px 20px;width:70%;background-color:#00BCD4;color:#fff;border-color:#00BCD4"></div>
+                </center>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

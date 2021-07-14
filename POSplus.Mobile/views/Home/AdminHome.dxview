@@ -1,0 +1,32 @@
+<div data-options="dxView : { name: 'AdminHome', title: 'Home' } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <div class="hcontainer">
+            <div id="admingreeting">
+            </div>
+            <div id="adminspace">
+                <div class="row-with-medallion issupervisor">
+                    <div id="quadrant">
+                        <div data-bind="dxButton: { text:'Order', onClick: order,icon: 'fa fa-shopping-cart' }" style="width:100%;height:100%;background-color: #00BCD4;color: #fff;"></div>
+                    </div>
+                    <div id="quadrant1">
+                        <div data-bind="dxButton: { text:'Recall', onClick: recall,icon: 'fa fa-undo'  }" style="width:100%;height:100%;background-color: #00BCD4;color: #fff;"></div>
+                    </div>
+                    <div id="quadrant2">
+                        <div data-bind="dxButton: { text:'Customers', onClick: customers,icon: 'fa fa-users' }" style="width:100%;height:100%;background-color: #00BCD4;color: #fff;"></div>
+                    </div>
+                    <div id="quadrant3">
+                        <div data-bind="dxButton: { text:'Reports', onClick: reports,icon: 'fa fa-file-text' }" style="width:100%;height:100%;background-color: #00BCD4;color: #fff;"></div>
+                    </div>
+                    <div id="medcontainer" class="issupervisor">
+                        <div id="the-medallion" class="issupervisor"></div>
+                    </div>
+                </div>
+                <p id="powersoftcopy" style="width:100%;color:#CCC;"></p>
+            </div>
+            <div id="navbar">
+                <div data-bind="dxNavBar: { items: [{badge:'',icon:'fa fa-plus',text:'Open Shift'},{badge:'',icon:'fa fa-times',text:'Close Shift'}], onItemClick: itemEvent}" id="admindashboard">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

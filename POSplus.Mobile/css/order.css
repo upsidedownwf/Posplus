@@ -1,0 +1,310 @@
+﻿body {
+    margin: 0px;
+    padding: 0px;
+    height:100%;
+}
+
+#ordercontainer {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#head {
+    flex: 2;
+    padding: 4px 10px;
+    width: 100%;
+    grid-gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "one three" "two four" "five six"
+}
+#headdetails {
+    flex:1;
+    padding: 4px 10px;
+    width: 100%;
+    grid-gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "one three" "two four" "five six"
+}
+.itcustomersections {
+    flex: 2;
+    overflow: auto
+}
+@media (max-width:400px){
+    .itcustomersections {
+        flex: 4.3;
+        overflow: auto
+    }
+    #headdetails {
+        flex: 3;
+        padding: 4px 10px;
+        width: 100%;
+        grid-gap: 10px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: "one three" "two four" "five six"
+    }
+
+    #detailrows {
+        flex: .15;
+        width: 100%;
+    } 
+    #head {
+        flex: 3;
+        padding: 4px 10px;
+        width: 100%;
+        grid-gap: 10px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: "one three" "two four" "five six"
+    }
+    #aitemhead {
+        flex: 6;
+        width: 100%;
+        height:100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: "aione aithree" "aitwo aifour" "aiseven aieight" "aifive aisix";
+    }
+    #itemsection {
+        flex: 8;
+        overflow: auto;
+        height: 100%;
+        width: 100%;
+        border-bottom: 2px solid #CCC;
+        border-top: 2px solid #CCC;
+    }
+}
+#detailrows {
+    flex: .15;
+    width: 100%;
+    padding: 10px 20px;
+}
+#section {
+    flex: 4;
+    width: 100%;
+    overflow: auto;
+    border-bottom: 2px solid #CCC;
+    border-top: 2px solid #CCC;
+}
+#foot {
+    padding: 10px 20px;
+    flex: 1;
+    width:100%;
+}
+#one {
+    grid-area: one;
+}
+#two {
+    grid-area: two;
+    position:relative;
+}
+#three {
+    grid-area: three;
+    position: relative;
+}
+#four {
+    grid-area: four;
+    position: relative;
+}
+#five {
+    grid-area: five;
+    position: relative;
+}
+
+#six {
+    grid-area: six;
+    position: relative;
+}
+/*Add Items styles*/
+#itemhead {
+    flex: 4;
+    padding: 4px 10px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+        "ione ithree" 
+        "itwo ifour"
+        "ifive isix"
+}
+#itemsection {
+    flex: 8;
+    overflow: auto;
+    width: 100%;
+    border-bottom: 2px solid #CCC;
+    border-top: 2px solid #CCC;
+}
+#itemfoot {
+    padding: 8px 20px;
+    flex: 1;
+    width: 100%;
+}
+
+#ione {
+    grid-area: ione;
+    position: relative;
+}
+
+#itwo {
+    grid-area: itwo;
+    position: relative;
+    padding: 0px 10px;
+}
+
+#ithree {
+    grid-area: ithree;
+    position: relative;
+}
+
+#ifour {
+    grid-area: ifour;
+    position: relative;
+    padding: 0px 10px;
+}
+
+#ifive {
+    grid-area: ifive;
+    position: relative;
+}
+#isix {
+    grid-area: isix;
+    position: relative;
+}
+
+#iscustomerhead {
+    flex: 1;
+    padding: 4px 10px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+        "isone isone" 
+        "istwo isthree" 
+        "isfour isfive" 
+        "issix issix"
+}
+
+.scustomersection {
+    flex: 3;
+    overflow: auto;
+    width: 100%;
+    border-top: 2px solid #CCC;
+}
+
+
+#isone {
+    grid-area: isone;
+    position: relative;
+}
+
+#istwo {
+    grid-area: istwo;
+    position: relative;
+    padding: 0px 10px;
+    box-sizing: border-box;
+}
+
+#isthree {
+    grid-area: isthree;
+    position: relative;
+    box-sizing: border-box;
+    padding: 0px 10px;
+}
+
+#isfour {
+    grid-area: isfour;
+    position: relative;
+    padding: 0px 10px;
+    box-sizing: border-box;
+}
+
+#isfive {
+    grid-area: isfive;
+    position: relative;
+    padding: 0px 10px;
+    box-sizing: border-box;
+}
+
+#issix {
+    grid-area: issix;
+    position: relative;
+}
+
+#aitemhead {
+    flex: 6;
+    padding: 4px 10px 2px 10px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 39% 39% 22%;
+    grid-template-areas: "aione aithree" "aitwo aifour" "aifive aieight";
+}
+
+#aione {
+    grid-area: aione;
+    position: relative;
+}
+
+#aitwo {
+    grid-area: aitwo;
+    position: relative;
+    box-sizing: border-box;
+}
+
+#aithree {
+    grid-area: aithree;
+    position: relative;
+    box-sizing: border-box;
+}
+
+#aifour {
+    grid-area: aifour;
+    position: relative;
+    box-sizing: border-box;
+}
+
+#aifive {
+    grid-area: aifive;
+    position: relative;
+    box-sizing: border-box;
+    height: 45px;
+}
+
+#aisix {
+    grid-area: aisix;
+    position: relative;
+}
+#aiseven {
+    grid-area: aiseven;
+    position: relative;
+    box-sizing: border-box;
+}
+
+#aieight {
+    grid-area: aieight;
+    position: relative;
+    height: 45px;
+}
+.rows{
+    display:flex;
+    align-items:stretch;
+    flex-basis:45%
+}
+.flex1 {
+    flex: 1;
+}
+.flex2 {
+    flex: 1;
+}

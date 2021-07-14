@@ -1,0 +1,319 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>c9a9fbe5-8769-42b0-a5be-f2a95cf96f6c</ProjectGuid>
+    <AutoAssignPort>True</AutoAssignPort>
+    <RunInSimulator>True</RunInSimulator>
+    <UploadPluginsToTheCourier>True</UploadPluginsToTheCourier>
+    <RootNamespace>POSplus</RootNamespace>
+    <ApplicationPage>index.html</ApplicationPage>
+    <Name>POSplus.Mobile</Name>
+    <ScreenOrientation>Default</ScreenOrientation>
+    <ApplicationTitle>PowerPOSplus</ApplicationTitle>
+    <VersionPackage>1.0.0.0</VersionPackage>
+    <ShowSplashScreen>False</ShowSplashScreen>
+    <KeyApkPath>certificates\android_certificate.p12</KeyApkPath>
+    <KeyApkAlias>tmpl</KeyApkAlias>
+    <VersionCode>1</VersionCode>
+    <TemplateFileApk>templates\ApplicationTemplate.apk</TemplateFileApk>
+    <UseCustomTemplateNameApk>True</UseCustomTemplateNameApk>
+    <ApkDexFilePackageName>com.POSplus.Mobile</ApkDexFilePackageName>
+    <KeyDebuggable>False</KeyDebuggable>
+    <PackagePublisherID>99f91d2f-5297-4fb0-9d38-6d7969aa5ba2</PackagePublisherID>
+    <AppxPackageProductID>43e854b9-d21b-4882-8117-b959d15ae35c</AppxPackageProductID>
+    <KeyPackageIdentityPublisher>CN=99f91d2f-5297-4fb0-9d38-6d7969aa5ba2</KeyPackageIdentityPublisher>
+    <PhoneGapTokenKey>eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhdXRoIiwiaXNzIjoicGdiIiwianRpIjoiZGY0MGU4ZjAtNmFlZC00NGRlLTg5ZjktMzRkYmY4Njg5ZDgxIn0.V0t7SXiCodUW_LStvs2V1wauMV-dkHu6tAY5N2DnKbE</PhoneGapTokenKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="css\customer.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\font-awesome-extension.min.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\fonts\font-awesome-extension.eot">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\fonts\font-awesome-extension.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\fonts\font-awesome-extension.ttf">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\fonts\font-awesome-extension.woff">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\itemsearchtype.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\order.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\login.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\ddawhite.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="index.html" />
+    <Content Include="index.css" />
+    <Content Include="cordova.js" />
+    <Content Include="views\APISetup\ApiSetup.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\APISetup\ApiSetup.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\APISetup\ChangeApiSetup.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\APISetup\ChangeApiSetup.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\CloseShift\CloseEmployeeShift.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\CloseShift\CloseEmployeeShift.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\CloseShift\CloseShift.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\CloseShift\CloseShift.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Customer\Customers.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Customer\Customers.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Home\AdminHome.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Home\AdminHome.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Recall\Recall.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Recall\Recall.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Report\OrderListingDetails.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Report\OrderListingDetails.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Report\OrdersListing.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Report\OrdersListing.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Report\Reports.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Report\Reports.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Report\SalesListing.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Report\SalesListing.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Shift\EmployeeShift.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Shift\EmployeeShift.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Shift\OpenShift.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Shift\OpenShift.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Shift\ShiftType.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Shift\ShiftType.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Shift\View1.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <None Include="certificates\android_certificate.p12" />
+    <None Include="config.xml" />
+    <Content Include="index.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="layouts\Navbar\NavbarLayout.css" />
+    <Content Include="layouts\Navbar\NavbarLayout.html" />
+    <Content Include="layouts\Navbar\NavbarLayout.js" />
+    <Content Include="layouts\Pivot\PivotLayout.css" />
+    <Content Include="layouts\Pivot\PivotLayout.html" />
+    <Content Include="layouts\Pivot\PivotLayout.js" />
+    <Content Include="layouts\SlideOut\SlideOutLayout.css" />
+    <Content Include="layouts\SlideOut\SlideOutLayout.html" />
+    <Content Include="layouts\SlideOut\SlideOutLayout.js" />
+    <Content Include="layouts\Empty\EmptyLayout.css" />
+    <Content Include="layouts\Empty\EmptyLayout.html" />
+    <Content Include="layouts\Empty\EmptyLayout.js" />
+    <Content Include="layouts\Simple\SimpleLayout.css" />
+    <Content Include="layouts\Simple\SimpleLayout.html" />
+    <Content Include="layouts\Simple\SimpleLayout.js" />
+    <Content Include="layouts\Popup\PopupLayout.css" />
+    <Content Include="layouts\Popup\PopupLayout.html" />
+    <Content Include="layouts\Popup\PopupLayout.js" />
+    <Content Include="layouts\Split\SplitLayout.css" />
+    <Content Include="layouts\Split\SplitLayout.html" />
+    <Content Include="layouts\Split\SplitLayout.js" />
+    <Content Include="posplus.config.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Customer\AddCustomer.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Customer\AddCustomer.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Customer\CustomerSearch.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Customer\CustomerSearch.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Home\Home.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Home\Home.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\ItemSearchTypes\ItemsCategory.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\ItemSearchTypes\ItemsCategory.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\ItemSearchTypes\ItemsFamily.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\ItemSearchTypes\ItemsFamily.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Login\Login.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Login\Login.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\OrderExtras\Currency.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\OrderExtras\Currency.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\OrderExtras\Tables.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\OrderExtras\Tables.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Order\AddItems.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Order\AddItems.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Order\ItemSearch.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Order\ItemSearch.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Order\Order.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\Order\Order.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\readme.txt" />
+    <None Include="Resources\PackageIcons.Android.ic_launcher_36_36.png" />
+    <None Include="Resources\PackageIcons.Android.ic_launcher_48_48.png" />
+    <None Include="Resources\PackageIcons.Android.ic_launcher_72_72.png" />
+    <None Include="Resources\PackageIcons.Android.ic_launcher_96_96.png" />
+    <None Include="templates\ApplicationTemplate.apk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="certificates\" />
+    <Folder Include="css\" />
+    <Folder Include="css\fonts" />
+    <Folder Include="js\" />
+    <Folder Include="layouts\" />
+    <Folder Include="layouts\Empty\" />
+    <Folder Include="layouts\Navbar\" />
+    <Folder Include="layouts\Pivot\" />
+    <Folder Include="layouts\Popup\" />
+    <Folder Include="layouts\Simple\" />
+    <Folder Include="layouts\SlideOut\" />
+    <Folder Include="layouts\Split\" />
+    <Folder Include="images" />
+    <Folder Include="Resources\" />
+    <Folder Include="templates\" />
+    <Folder Include="views\" />
+    <Folder Include="views\Login" />
+    <Folder Include="views\Home" />
+    <Folder Include="views\Customer" />
+    <Folder Include="views\ItemSearchTypes" />
+    <Folder Include="views\CloseShift" />
+    <Folder Include="views\APISetup" />
+    <Folder Include="views\Report" />
+    <Folder Include="views\Recall" />
+    <Folder Include="views\Shift" />
+    <Folder Include="views\OrderExtras" />
+    <Folder Include="views\Order" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\POSplus.Shared\POSplus.Shared.dxjsproj">
+      <Name>POSplus.Shared</Name>
+      <Project>{5b46bddd-22a0-4676-9d6c-f09f143182ab}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+  <Target Name="ResolveReferences">
+    <Message Text="Copying references to output dir..." Importance="high" />
+    <MSBuild Targets="Build" Projects="@(ProjectReference)" Properties="OutputPath=$([System.IO.Path]::GetFullPath('$(OutputPath)'))">
+    </MSBuild>
+  </Target>
+  <Target Name="CopyFilesToOutputDirectory">
+    <Message Text="Copying files to output dir..." Importance="high" />
+    <Copy SourceFiles="@(Content)" DestinationFiles="@(Content-&gt;'$(OutputPath)$([MSBuild]::MakeRelative($(MSBuildProjectDirectory),'%(FullPath)'))')" />
+  </Target>
+  <Target Name="CoreCompile">
+    <!--<Message Text="'$(MSBuildToolsPath)'"></Message>-->
+    <!--<Message Text="'$(BuildingProject)'"></Message>-->
+    <!--<Message Text="Build JSProject '$(MSBuildProjectFile)':" Importance="high"></Message>-->
+    <!--<Message Text="Finished Build JSProject '$(MSBuildProjectFile)'." Importance="high"></Message>-->
+  </Target>
+  <Target Name="CreateManifestResourceNames" Condition="'@(ResxWithNoCulture)@(ResxWithCulture)@(NonResxWithNoCulture)@(NonResxWithCulture)'!=''" />
+  <Target Name="Clean">
+    <!--
+    <Message Text="Cleaning Output files..." Importance="high" />
+    <Delete Files="@([System.IO.Path]::GetFullPath('$(OutputPath)'))" />
+    -->
+    <Message Text="Cleaning Output dir ($([System.IO.Path]::GetFullPath('$(OutputPath)')))..." Importance="high" />
+    <RemoveDir Directories="$([System.IO.Path]::GetFullPath('$(OutputPath)'))" />
+  </Target>
+</Project>

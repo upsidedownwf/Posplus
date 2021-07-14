@@ -1,0 +1,55 @@
+<div data-options="dxView : { name: 'Order', title: 'Order', disableCache:true  }" >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <div data-bind="dxLoadPanel: { message: 'Placing Order....',visible: Indicator ,closeOnOutsideClick: false,showIndicator: Indicator}"
+             style="position: absolute; top: 30%; left: 50%">
+        </div>
+        <div data-bind="dxLoadPanel: { message: 'Holding Order....',visible: Indicators ,closeOnOutsideClick: false,showIndicator: Indicators}"
+             style="position: absolute; top: 30%; left: 50%">
+        </div>
+        <div id="ordercontainer">
+            <div id="head">
+                <div id="one" style="padding:10px 0px;"><div style="box-sizing:border-box;text-align:left;display:inline-block"><strong>Order Number:</strong></div> <div id="onetext" style="box-sizing:border-box;text-align:left;display:inline-block"></div></div>
+                    <div id="two" style="padding:10px 0px;"></div>
+                    <div id="three">
+                        <div data-bind="dxButton: { text: 'add item',icon: 'plus', onClick: additem,width:'80%' }" class="btn" style="border-radius:20px 20px;width:70%;background-color:#00BCD4;color:#fff;border-color:#00BCD4;position:absolute;right:0px;"></div>
+                  </div>
+                    <div id="four"><strong><label>Currency</label></strong><div id="currencyDropdown" style="position:absolute;right:0px;width:95%"></div></div>
+                <div id="five">
+                    <strong><label>Table</label></strong>
+                    <div data-bind="dxTextBox: {placeholder:'Select Table...', onFocusIn: gettable, value: table, readOnly:true, width:'95%'}" style="position:absolute;left:0px;"></div>
+                </div>
+                    <div id="six">
+                        <strong><label>Customer</label></strong>
+                        <div id="customerValue" style="position:absolute;right:0px;width:95%"></div>
+                    </div>
+            </div>
+            <div id="section" data-bind="dxScrollView: {useNative: false, scrollByContent: true, bounceEnabled: true}">
+                
+            </div>
+            <div id="foot">
+                <div class="rows" style="padding-bottom:3px;">
+                    <div class="flex1" style="padding-right:15px">
+                            <div><div style="width:70px;box-sizing:border-box;text-align:left;display:inline-block"><strong>SubTotal: </strong></div><div id="subbtotal" style="box-sizing:border-box;text-align:left;display:inline-block"></div></div>
+                        <div><div style="width:70px;text-align:left;display:inline-block"><strong>Total: </strong></div><div id="total" style="box-sizing:border-box;text-align:left;display:inline-block"></div></div>
+                    </div>
+                    <div class="flex2" style="padding-left:15px">
+                        <div><div style="width:70px;text-align:left;display:inline-block"><strong>Discount: </strong></div><div id="discount" style="box-sizing:border-box;text-align:left;display:inline-block"></div></div>
+                        <div><div style="width:70px;text-align:left;display:inline-block"><strong>Tax: </strong></div><div id="tax" style="box-sizing:border-box;text-align:left;display:inline-block"></div></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="flex2">
+                        <center>
+                            <div data-bind="dxButton: { text: 'Hold Order', onClick: holdorder, icon:'fa fa-pause' }" class="btn btn-sm form-control" style="border-radius:20px 20px;width:95%;background-color:rgb(255, 128, 64);color:#fff;border-color:rgb(255, 128, 64)"></div>
+                        </center>
+                    </div>
+                    <div class="flex2" style="padding:0px">
+                        <center>
+                            <div data-bind="dxButton: { text: 'Place Order', onClick: placeorder, icon:'fa fa-save' }" class="btn btn-sm form-control" style="border-radius:20px 20px;width:95%;background-color:#00BCD4;color:#fff;border-color:#00BCD4"></div>
+                        </center>
+                    </div>
+                </div>
+          </div>
+        </div>
+    </div>
+</div>
